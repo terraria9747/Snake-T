@@ -1,35 +1,13 @@
 // 引入less
-require("./style/index.less")
+import "./style/index.less"
 
-// 食物类
-class Food {
-	element: HTMLElement
+// 导入 Food.ts
+import Food from "./modules/Food"
 
-	constructor() {
-		// 获取food元素 | ! 指定元素不为空
-		this.element = document.getElementById("food")!
-	}
+// 导入 ScorePanle.ts
+import ScorePanel from "./modules/ScorePanel"
 
-	// 获取x坐标
-	get X() {
-		return this.element.offsetLeft
-	}
-
-	// 获取y坐标
-	get Y() {
-		return this.element.offsetTop
-	}
-
-	// 修改食物的位置
-	change() {
-		let top = Math.round(Math.random() * 29) * 10
-		let left = Math.round(Math.random() * 29) * 10
-
-		this.element.style.top = top + "px";
-		this.element.style.left = left + "px";
-	}
-}
-
+// 测试 Food =====================================
 // 测试食物的坐标
 const food = new Food()
 console.log("初始位置:", food.X, food.Y);
@@ -37,3 +15,10 @@ console.log("初始位置:", food.X, food.Y);
 // 修改食物的位置
 food.change()
 console.log("随机位置:", food.X, food.Y);
+
+// 测试 ScorePanle =====================================
+// 测试 分数和级别
+const s = new ScorePanel()
+for (let i = 0; i < 10; i++) {
+	s.addScore()
+}
