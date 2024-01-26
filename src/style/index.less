@@ -1,4 +1,71 @@
-body {
-	background-color: #bbfeab;
-	display: flex;
+// 颜色变量
+@bg-color: #b7d4a8;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
+
+body {
+	background-color: #90ff74;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+// 主容器
+#main {
+	margin: 100px auto;
+	width: 360px;
+	height: 420px;
+	background-color: @bg-color;
+	border: 10px solid #000000;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+
+	// 游戏舞台
+	#stage {
+		position: relative;
+		width: 304px;
+		height: 304px;
+		border: 2px solid #000000;
+
+		// 蛇
+		#snake {
+			// 蛇的身体
+			div {
+				position: absolute;
+				width: 10px;
+				height: 10px;
+				background-color: #000000;
+				border: 1px solid @bg-color;
+			}
+		};
+
+		// 食物
+		#food {
+			position: absolute;
+			left: 40px;
+			top: 50px;
+			width: 10px;
+			height: 10px;
+			background-color: rgb(255, 81, 0);
+			border-radius: 5px;
+		}
+	}
+
+	// 积分牌
+	#score-panel {
+		width: 90%;
+		display: flex;
+		justify-content: space-between
+
+		// 积分
+		// 关卡
+	}
+}
+
