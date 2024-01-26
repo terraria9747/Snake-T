@@ -9,3 +9,11 @@ npm i -D less less-loader css-loader style-loader
 ```
 npm i -D postcss postcss-loader postcss-preset-env
 ```
+
+# 2.页面布局
+html结构 + less样式
+
+# 3.Food类
+1.获取food元素
+2.获取x/y轴的坐标
+3.修改食物的位置
