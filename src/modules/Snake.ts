@@ -29,10 +29,32 @@ class Snake {
 
 	// 设置蛇头坐标
 	set X(value: number) {
+		// 如果旧值和新值相同, 则直接返回不再修改
+		if (this.X === value) {
+			return;
+		}
+
+		// X坐标的合法值为 0-290
+		if (value < 0 || value > 290) {
+			// 不在范围内抛出异常
+			throw new Error("🐍蛇撞墙了");
+		}
+
 		this.head.style.left = value + "px"
 	}
 	
 	set Y(value: number) {
+		// 如果新值和旧值相同, 则直接返回不再修改
+		if (this.Y === value) {
+			return;
+		}
+
+		// X坐标的合法值为 0-290
+		if (value < 0 || value > 290) {
+			// 不在范围内抛出异常
+			throw new Error("🐍蛇撞墙了");
+		}
+
 		this.head.style.top = value + "px"
 	}
 
