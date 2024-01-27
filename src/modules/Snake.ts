@@ -12,7 +12,9 @@ class Snake {
 		// 获取蛇的信息
 		this.element = document.getElementById("snake")!
 		// as HTMLElement 类型断言
+		// 蛇头 -- 第一个div盒子
 		this.head = document.querySelector("#snake > div")! as HTMLElement;
+		// 蛇身体
 		this.bodies = this.element.getElementsByTagName("div");
 	}
 
