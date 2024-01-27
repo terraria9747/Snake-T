@@ -78,7 +78,7 @@ class GameControl {
 			this.snake.Y = Y;
 		} catch(e) {
 			// 捕获异常
-			alert(e + "Game Over!!!");
+			alert(e);
 			// 游戏结束
 			this.isLive = false
 		}

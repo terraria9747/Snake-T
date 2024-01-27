@@ -74,3 +74,21 @@ html结构 + less样式
    - 食物位置发生改变 -- this.food.change()
    - 分数增加 -- this.scorePanel.addScore()
    - 蛇增加一节 -- this.snake.addBody()
+
+# 12.身体的移动
+1. 定义蛇移动的方法 moveBody(){}
+2. X轴和Y轴位置变化时触发 moveBody(){}
+3. 将后面的身体设置为前边身体的位置
+4. 例子:
+	- 第四节 = 第三节位置
+	- 第三节 = 第二节位置
+	- 第二节 = 蛇头位置
+5. 遍历获取所有的身体
+6. 获取前边身体的位置
+7. 将值设置到当前身体上
+
+# 13.蛇撞到自己
+1. 蛇头坐标与身体的每一节的坐标是否重复
+2. 定义checkHeadBody方法 | 修改蛇的坐标之后调用
+3. 获取所有的身体
+4. 判断蛇头坐标(this.X | this.Y)与身体的每一节的坐标(bd.offsetLeft | bd.offsetTop)是否重复
